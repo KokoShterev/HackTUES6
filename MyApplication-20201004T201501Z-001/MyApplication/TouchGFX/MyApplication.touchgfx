@@ -1,0 +1,2885 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "Filename": "Hallway\\window_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": -75,
+            "Width": 480,
+            "Height": 260,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "Hallway\\sky_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage2",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 101,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "Hallway\\ST_HouseDemo_UI_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage3",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId1",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "livingroom",
+            "X": 155,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": true
+          },
+          {
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "kitchen",
+            "X": 310,
+            "Y": 106,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": true
+          },
+          {
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId3",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "bathroom",
+            "X": 0,
+            "Y": 106,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "bathr",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "bathroom",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "bathroom",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "kitchen",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "kitchen",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Kitchen",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "lr",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "livingroom",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "lr_dark",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "moveB",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 25,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "bathroom",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "moveB1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "moveB",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 0,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "bathroom",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "moveK",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 285,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "kitchen",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "moveK1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "moveK",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 310,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 348,
+              "ActionComponent": "kitchen",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "moveLM",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 155,
+              "Y": 187,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "livingroom",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "moveLM1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "moveLM",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 155,
+              "Y": 212,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "livingroom",
+              "Type": "ActionMove"
+            }
+          }
+        ],
+        "Name": "hallway",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "LivingRoom\\lr-dark.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "LivingRoom\\light_button_on.png",
+            "Released": "LivingRoom\\light_button_on.png",
+            "Alpha": 255,
+            "Name": "lights",
+            "X": 400,
+            "Y": 0,
+            "Width": 80,
+            "Height": 80,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "goback",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId4",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "bedroom",
+            "X": 310,
+            "Y": 106,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "lights_on",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "lights",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "lr_Light",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "go_back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "goback",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "hallway",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "bedroom",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "bedroom",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "bedroom_off",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "anim",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 285,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "bedroom",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "anim1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "anim",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 310,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "bedroom",
+              "Type": "ActionMove"
+            }
+          }
+        ],
+        "Name": "lr_dark",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "LivingRoom\\minimalist-living-room.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "LivingRoom\\Lights_on.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "light1",
+            "X": 22,
+            "Y": -32,
+            "Width": 192,
+            "Height": 145,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "LivingRoom\\Lights_on.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "light1_1",
+            "X": 240,
+            "Y": -32,
+            "Width": 192,
+            "Height": 145,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "LivingRoom\\Lights_on.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "light1_2",
+            "X": 132,
+            "Y": -32,
+            "Width": 192,
+            "Height": 145,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "go_back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "LivingRoom\\light_button_on.png",
+            "Released": "LivingRoom\\light_button_on.png",
+            "Alpha": 255,
+            "Name": "lights",
+            "X": 400,
+            "Y": 0,
+            "Width": 80,
+            "Height": 80,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "bedroom",
+            "X": 310,
+            "Y": 106,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "go_back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "hallway",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "lights",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "lights",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "lr_dark",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "bedroom",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "bedroom",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "bedroom_off",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "anim1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 285,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "bedroom",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "anim2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "anim1",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "X": 310,
+              "Y": 106,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "bedroom",
+              "Type": "ActionMove"
+            }
+          }
+        ],
+        "Name": "lr_Light",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "Sketch001.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "LivingRoom\\light_button_on.png",
+            "Released": "LivingRoom\\light_button_on.png",
+            "Alpha": 255,
+            "Name": "lights",
+            "X": 400,
+            "Y": 0,
+            "Width": 80,
+            "Height": 80,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "lr_dark",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "lights",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "lights",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "bedroom_on",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "bedroom_off",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "istockphoto-685475894-170667a.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "LivingRoom\\light_button_on.png",
+            "Released": "LivingRoom\\light_button_on.png",
+            "Alpha": 255,
+            "Name": "lights",
+            "X": 400,
+            "Y": 0,
+            "Width": 80,
+            "Height": 80,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "lr_dark",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "lights",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "lights",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "bedroom_off",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "bedroom_on",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "BathRoom\\bathroom_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "BathRoom\\homecontrol_glow.png",
+            "Released": "BathRoom\\homecontrol_glow.png",
+            "Alpha": 255,
+            "Name": "controller",
+            "X": 36,
+            "Y": 57,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "hallway",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "controller",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "controller",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "menu",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          }
+        ],
+        "Name": "bathroom",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "MainScreen\\main_bg_home_control.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "BathRoom\\icon2.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "wm",
+            "X": 37,
+            "Y": 36,
+            "Width": 195,
+            "Height": 201,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "BathRoom\\icon1.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "bt",
+            "X": 240,
+            "Y": 36,
+            "Width": 200,
+            "Height": 200,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 107,
+                "Height": 140,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "wm_button",
+            "X": 82,
+            "Y": 67,
+            "Width": 107,
+            "Height": 140,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 200,
+                "Height": 159,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "bt_button",
+            "X": 240,
+            "Y": 54,
+            "Width": 200,
+            "Height": 159,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "bathroom",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "wm_button",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "washingM",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "bathtub",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "bt_button",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "BathTub_off",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "menu",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "MainScreen\\main_bg_home_control.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage3",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_normal.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 400,
+            "Y": 72,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_heavyduty.png",
+            "Alpha": 255,
+            "Name": "image2",
+            "X": 0,
+            "Y": 72,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_ecowash.png",
+            "Alpha": 255,
+            "Name": "image4",
+            "X": 400,
+            "Y": 172,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 200,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "heavy_smart",
+            "X": 0,
+            "Y": 72,
+            "Width": 80,
+            "Height": 200,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "blak_screen.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage2",
+            "X": 178,
+            "Y": 72,
+            "Width": 120,
+            "Height": 125,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_smartwash.png",
+            "Alpha": 255,
+            "Name": "image3",
+            "X": 0,
+            "Y": 172,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 200,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "normal_eco",
+            "X": 400,
+            "Y": 72,
+            "Width": 80,
+            "Height": 200,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "back_center_white.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 142,
+            "Y": 39,
+            "Width": 193,
+            "Height": 195,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "BathRoom\\go_back_button.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "normal_eco",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "normal_eco",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "normal_eco",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "heavy_smart",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "heavy_smart",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "washingM",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "MainScreen\\main_bg_home_control.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage3",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_normal.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 400,
+            "Y": 72,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_heavyduty.png",
+            "Alpha": 255,
+            "Name": "image2",
+            "X": 0,
+            "Y": 72,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_ecowash.png",
+            "Alpha": 255,
+            "Name": "image4",
+            "X": 400,
+            "Y": 172,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 200,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "heavy_smart",
+            "X": 0,
+            "Y": 72,
+            "Width": 80,
+            "Height": 200,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_smartwash.png",
+            "Alpha": 255,
+            "Name": "image3",
+            "X": 0,
+            "Y": 172,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 200,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "normal_eco",
+            "X": 400,
+            "Y": 72,
+            "Width": 80,
+            "Height": 200,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "BathRoom\\go_back_button.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "FileNameFirst": "anim\\wash_frame_01.png",
+            "FileNameLast": "anim\\wash_frame_11.png",
+            "UpdateTicksInterval": 30,
+            "Alpha": 255,
+            "StartOnLoad": true,
+            "ReverseEnabled": false,
+            "LoopEnabled": true,
+            "AnimationEndedCallback": false,
+            "Name": "animatedImage1",
+            "X": 174,
+            "Y": 72,
+            "Width": 132,
+            "Height": 132,
+            "Type": "AnimatedImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "back_center_white.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 143,
+            "Y": 41,
+            "Width": 195,
+            "Height": 195,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "normal_eco",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "normal_eco",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "normal_eco",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "heavy_smart",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "heavy_smart",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "heavy_smart",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "heavy_smart",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "MainScreen\\main_bg_home_control.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage3",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_normal.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 400,
+            "Y": 72,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_heavyduty.png",
+            "Alpha": 255,
+            "Name": "image2",
+            "X": 0,
+            "Y": 72,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_ecowash.png",
+            "Alpha": 255,
+            "Name": "image4",
+            "X": 400,
+            "Y": 172,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 200,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "heavy_smart",
+            "X": 0,
+            "Y": 72,
+            "Width": 80,
+            "Height": 200,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "icon_center_smartwash.png",
+            "Alpha": 255,
+            "Name": "image3",
+            "X": 0,
+            "Y": 172,
+            "Width": 80,
+            "Height": 100,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 200,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "normal_eco",
+            "X": 400,
+            "Y": 72,
+            "Width": 80,
+            "Height": 200,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "BathRoom\\go_back_button.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "FileNameFirst": "anim\\wash_frame_01.png",
+            "FileNameLast": "anim\\wash_frame_11.png",
+            "UpdateTicksInterval": 60,
+            "Alpha": 255,
+            "StartOnLoad": true,
+            "ReverseEnabled": false,
+            "LoopEnabled": true,
+            "AnimationEndedCallback": false,
+            "Name": "animatedImage1",
+            "X": 174,
+            "Y": 72,
+            "Width": 132,
+            "Height": 132,
+            "Type": "AnimatedImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "back_center_white.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 143,
+            "Y": 41,
+            "Width": 195,
+            "Height": 195,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "normal_eco",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "normal_eco",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "heavy_smart",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "heavy_smart",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "heavy_smart",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "normal_eco",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "Bathtub\\BathTub_UI_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Bathtub\\power_icon.png",
+            "Released": "Bathtub\\power_icon.png",
+            "Alpha": 255,
+            "Name": "power",
+            "X": 410,
+            "Y": 0,
+            "Width": 70,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "on",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "power",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "BathTub_on",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "BathTub_off",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "Bathtub\\BathTub_UI_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "Bathtub\\bathtub_water.png",
+            "Alpha": 255,
+            "Name": "water",
+            "X": -16,
+            "Y": 230,
+            "Width": 265,
+            "Height": 115,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "Bathtub\\BathTub_overlay.png",
+            "Alpha": 255,
+            "Name": "wall",
+            "X": 0,
+            "Y": 162,
+            "Width": 310,
+            "Height": 110,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Bathtub\\power_icon.png",
+            "Released": "Bathtub\\power_icon.png",
+            "Alpha": 255,
+            "Name": "power",
+            "X": 410,
+            "Y": 0,
+            "Width": 70,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "fill",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": -16,
+              "Y": 122,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 350,
+              "ActionComponent": "water",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "off",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "power",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "BathTub_off",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "BathTub_on",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "Kitchen_UI_bg.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "termo_select.png",
+            "Released": "termo_select.png",
+            "Alpha": 255,
+            "Name": "menu",
+            "X": 22,
+            "Y": 68,
+            "Width": 80,
+            "Height": 80,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "hallway",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "menu",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "menu",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu_kitchen",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "Kitchen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "white.PNG",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": -399,
+            "Y": -213,
+            "Width": 1279,
+            "Height": 698,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 141,
+                "Height": 126,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "oven_button",
+            "X": 269,
+            "Y": 85,
+            "Width": 141,
+            "Height": 126,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 134,
+                "Height": 126,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "extractor_button",
+            "X": 59,
+            "Y": 85,
+            "Width": 134,
+            "Height": 126,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "oven.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage2",
+            "X": 269,
+            "Y": 85,
+            "Width": 141,
+            "Height": 126,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "propeller.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage3",
+            "X": 59,
+            "Y": 85,
+            "Width": 134,
+            "Height": 126,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "oven_name",
+            "X": 313,
+            "Y": 211,
+            "Width": 52,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "extr_name",
+            "X": 80,
+            "Y": 211,
+            "Width": 92,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "Kitchen",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "extraxtor",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "extractor_button",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "extractor",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "oven",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "oven_button",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "ovenOff",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "menu_kitchen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Filename": "MainScreen\\main_bg_home_control.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "FileNameFirst": "Frames_00000.png",
+            "FileNameLast": "Frames_00009.png",
+            "UpdateTicksInterval": 10,
+            "Alpha": 255,
+            "StartOnLoad": true,
+            "ReverseEnabled": false,
+            "LoopEnabled": true,
+            "AnimationEndedCallback": false,
+            "Name": "extractor",
+            "X": 121,
+            "Y": 80,
+            "Width": 238,
+            "Height": 238,
+            "Type": "AnimatedImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 149,
+            "Y": 31,
+            "Width": 183,
+            "Height": 49,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu_kitchen",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "extractor",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "RelativeFilename": "white.PNG",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": -499,
+            "Y": -283,
+            "Width": 1279,
+            "Height": 698,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "ovenOff.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage2",
+            "X": 54,
+            "Y": 0,
+            "Width": 373,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Dark_Togglebars_Toggle_large_button_On.png",
+            "Released": "__designer\\Dark_Togglebars_Toggle_large_button_Off.png",
+            "Alpha": 255,
+            "Name": "on_off",
+            "X": 176,
+            "Y": 0,
+            "Width": 128,
+            "Height": 38,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu_kitchen",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "on",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "on_off",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ovenOn",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "ovenOff",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "RelativeFilename": "white.PNG",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": -101,
+            "Y": -93,
+            "Width": 1279,
+            "Height": 698,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "ovenOn.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "scalableImage4",
+            "X": 22,
+            "Y": 0,
+            "Width": 438,
+            "Height": 272,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "Buttons\\back.png",
+            "Released": "Buttons\\back.png",
+            "Alpha": 255,
+            "Name": "back",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Dark_Togglebars_Toggle_large_button_Off.png",
+            "Released": "__designer\\Dark_Togglebars_Toggle_large_button_On.png",
+            "Alpha": 255,
+            "Name": "on_off",
+            "X": 176,
+            "Y": 0,
+            "Width": 128,
+            "Height": 38,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "back",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "menu_kitchen",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "off",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "on_off",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ovenOff",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "ovenOn",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId7",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId8",
+        "IsResource": false
+      }
+    ],
+    "Name": "STM32H750B-DK",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "hallway",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      24
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp",
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD24bpp": {
+        "Id": "LCD24bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32H750B-DK.ioc --platform=m7",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape"
+  },
+  "Version": "4.14.0",
+  "CreatedBy": "4.14.0"
+}
