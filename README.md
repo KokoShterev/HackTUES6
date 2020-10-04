@@ -8,7 +8,7 @@
 
 1) Проектът е създаден с приложението **TouchGFX 4.14.0 Designer**, който можете да изтеглите от [тук](https://drive.google.com/file/d/1KEF2FJAqcGtoG4UEwilVbEjeRpIrCE2T/view?usp=sharing).
 2) Extract-вате .zip файла и инсталирате приложението, което се намира в Utilities\PC_Software\TouchGFXDesigner\TouchGFX-4.14.0.msi.
-3) Отваряте нашия проект, който се намира в project\TouchGFX\project.touchgfx.
+3) Отваряте нашия проект, който се намира в MyApplication-20201004T201501Z-001\MyApplication\TouchGFX\MyApplication.touchgfx.
 4) След това избирате Run Simulator.
 
 ### Информация за авторите на проекта
